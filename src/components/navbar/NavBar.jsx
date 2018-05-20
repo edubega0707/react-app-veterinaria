@@ -23,7 +23,10 @@ const Logged = ({logOut}) => (
         <Link to="/profile">
         <MenuItem primaryText="Profile" />
         </Link>
-        <MenuItem primaryText="Sign out" onClick={logOut}/>
+        <Link to="/">
+            <MenuItem primaryText="Cerrar Sesion" onClick={logOut}/>
+        </Link>
+       
     </IconMenu>
    </span>
 );
@@ -45,7 +48,7 @@ class Navbar extends React.Component{
     render(){
 
         //let {open, products} = this.state;
-        let {logged, } = this.props;
+        let {logged} = this.props;
         return(
             <div>
                 <AppBar

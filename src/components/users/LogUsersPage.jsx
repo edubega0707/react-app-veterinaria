@@ -56,7 +56,7 @@ class LogUsersPage extends Component {
     render()
     {
         let {user, newUser} = this.state;
-        let {logIn} = this.props;
+        //let {logIn} = this.props;
         let path = this.props.location.pathname;
         return(
             <div className="log-users-container">

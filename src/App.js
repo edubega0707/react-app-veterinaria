@@ -34,7 +34,7 @@ class App extends Component {
     console.log(user)
     // e.preventDefault()
     //const userToken = JSON.parse(localStorage.getItem('userToken'));
-    let url = 'http://localhost:8000/api-token-auth/';
+    let url = 'http://127.0.0.1:8000/api-token-auth/';
     var request = new Request(url, {
         method: 'POST',
         body: JSON.stringify(user),
@@ -69,17 +69,18 @@ class App extends Component {
   render() {
     let {logged} = this.state;
     return (
-      <div className="App">
-      
+      <div className="App">    
         <Navbar
           logOut={this.logOut}
           logged={logged}
         />
-
+        <div className='routes-container'>
           <Routes
-         logIn={this.logIn}
-         logged={logged}
-         />         
+            logIn={this.logIn}
+            logged={logged}
+          /> 
+        </div>
+                 
         
       </div>
     );
